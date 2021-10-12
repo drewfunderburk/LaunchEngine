@@ -14,6 +14,14 @@ Launch::Vector4::Vector4(float x, float y, float z, float w)
     this->w = w;
 }
 
+Launch::Vector4::Vector4(Vector3 vector, float w)
+{
+    this->x = vector.x;
+    this->y = vector.y;
+    this->z = vector.z;
+    this->w = w;
+}
+
 float Launch::Vector4::getMagnitude()
 {
     return (float)sqrt(x * x + y * y + z * z + w * w);

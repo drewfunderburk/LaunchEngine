@@ -15,6 +15,13 @@ Launch::Vector3::Vector3(float x, float y, float z)
     this->z = z;
 }
 
+Launch::Vector3::Vector3(Vector2 vector, float z)
+{
+    this->x = vector.x;
+    this->y = vector.y;
+    this->z = z;
+}
+
 float Launch::Vector3::getMagnitude()
 {
     return sqrt(x * x + y * y + +z * z);

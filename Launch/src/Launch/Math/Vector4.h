@@ -1,5 +1,6 @@
 #pragma once
 #include "../Core.h"
+#include "Vector3.h"
 #include <string>
 
 namespace Launch
@@ -12,8 +13,8 @@ namespace Launch
         float w;
 
         Vector4();
-
         Vector4(float x, float y, float z, float w);
+        Vector4(Vector3 vector, float w);
 
         friend Vector4 operator *(float scalar, Vector4 lhs);
 
