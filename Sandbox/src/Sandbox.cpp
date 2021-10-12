@@ -1,15 +1,15 @@
 #include <Launch.h>
 
-class Sandbox : public Launch::Application
+class Sandbox : public Application
 {
 public:
 	Sandbox()
 	{
-		Launch::Vector4 test4 = Launch::Vector4();
+		Vector4 test4 = Vector4();
 		LN_TRACE(test4.toString());
-		Launch::Vector3 test3 = Launch::Vector3();
+		Vector3 test3 = Vector3();
 		LN_TRACE(test3.toString());
-		Launch::Vector2 test2 = Launch::Vector2();
+		Vector2 test2 = Vector2();
 		LN_TRACE(test2.toString());
 	}
 	~Sandbox()

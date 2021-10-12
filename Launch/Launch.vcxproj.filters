@@ -24,7 +24,6 @@
     <ClInclude Include="src\Launch\Math\Vector2.h" />
     <ClInclude Include="src\Launch\Math\Vector3.h" />
     <ClInclude Include="src\Launch\Math\Vector4.h" />
-    <ClInclude Include="src\Launch\Math\Math.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Launch\Application.cpp">

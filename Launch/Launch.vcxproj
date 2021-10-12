@@ -148,7 +148,6 @@
     <ClInclude Include="src\Launch\Core.h" />
     <ClInclude Include="src\Launch\EntryPoint.h" />
     <ClInclude Include="src\Launch\Log.h" />
-    <ClInclude Include="src\Launch\Math\Math.h" />
     <ClInclude Include="src\Launch\Math\Matrix3.h" />
     <ClInclude Include="src\Launch\Math\Matrix4.h" />
     <ClInclude Include="src\Launch\Math\Vector2.h" />

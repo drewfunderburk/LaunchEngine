@@ -1,9 +1,6 @@
 #pragma once
 #include "../Core.h"
 
-struct Vector2;
-struct Vector3;
-
 namespace Launch
 {
     struct LAUNCH_API Matrix3
