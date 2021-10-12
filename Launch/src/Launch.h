@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "Launch/Application.h"
 #include "Launch/Log.h"
+#include "Launch/Graphics/Graphics.h"
 
 #include "Launch/Math/Vector2.h"
 #include "Launch/Math/Vector3.h"

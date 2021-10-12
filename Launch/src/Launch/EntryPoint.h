@@ -11,6 +11,11 @@ int main(int argc, char** argv)
 	Launch::Log::Init();
 	LN_CORE_INFO("Log initialized");
 
+	// Initialize Graphics
+	LN_CORE_INFO("Initializing Graphics...");
+	Launch::Graphics::Init();
+	LN_CORE_INFO("Graphics Initialized");
+
 	// Launch client application
 	LN_CORE_INFO("Launching Application...");
 	auto app = Launch::CreateApplication();
