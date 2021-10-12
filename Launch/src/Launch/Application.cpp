@@ -1,4 +1,5 @@
 #include "Application.h"
+#include <cmath>
 
 namespace Launch
 {
@@ -12,9 +13,6 @@ namespace Launch
 
 	void Application::Run()
 	{
-		while (true)
-		{
-
-		}
+		system("pause");
 	}
 }
