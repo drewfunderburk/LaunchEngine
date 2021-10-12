@@ -4,7 +4,7 @@
 
 namespace Launch
 {
-	class Graphics
+	class LAUNCH_API Graphics
 	{
 	public:
 		Graphics() {}
