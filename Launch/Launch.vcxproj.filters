@@ -19,6 +19,12 @@
     <ClInclude Include="src\Launch\Log.h">
       <Filter>Launch</Filter>
     </ClInclude>
+    <ClInclude Include="src\Launch\Math\Matrix3.h" />
+    <ClInclude Include="src\Launch\Math\Matrix4.h" />
+    <ClInclude Include="src\Launch\Math\Vector2.h" />
+    <ClInclude Include="src\Launch\Math\Vector3.h" />
+    <ClInclude Include="src\Launch\Math\Vector4.h" />
+    <ClInclude Include="src\Launch\Math\Math.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Launch\Application.cpp">
@@ -27,5 +33,10 @@
     <ClCompile Include="src\Launch\Log.cpp">
       <Filter>Launch</Filter>
     </ClCompile>
+    <ClCompile Include="src\Launch\Math\Matrix3.cpp" />
+    <ClCompile Include="src\Launch\Math\Matrix4.cpp" />
+    <ClCompile Include="src\Launch\Math\Vector2.cpp" />
+    <ClCompile Include="src\Launch\Math\Vector3.cpp" />
+    <ClCompile Include="src\Launch\Math\Vector4.cpp" />
   </ItemGroup>
 </Project>
