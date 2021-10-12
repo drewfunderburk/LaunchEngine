@@ -25,6 +25,7 @@ namespace Launch
 }
 
 // Core log macros
+#define LN_CORE_PRINT(...) printf(__VA_ARGS__);
 #define LN_CORE_TRACE(...) ::Launch::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define LN_CORE_INFO(...) ::Launch::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define LN_CORE_WARN(...) ::Launch::Log::GetCoreLogger()->warn(__VA_ARGS__)
