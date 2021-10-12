@@ -13,6 +13,8 @@
 #include "Launch/Math/Matrix3.h"
 #include "Launch/Math/Matrix4.h"
 
+#include "Launch/Transform.h"
+
 // --Entry Point--
 #include "Launch/EntryPoint.h"
 // ---------------
