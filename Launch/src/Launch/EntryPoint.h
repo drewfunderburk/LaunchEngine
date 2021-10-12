@@ -7,6 +7,7 @@ extern Launch::Application* Launch::CreateApplication();
 int main(int argc, char** argv)
 {
 	// Initialize Log
+	printf("Initializing Log...\n");
 	Launch::Log::Init();
 	LN_CORE_INFO("Log initialized");
 
