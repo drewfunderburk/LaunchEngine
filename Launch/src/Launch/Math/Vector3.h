@@ -1,5 +1,6 @@
 #pragma once
 #include "../Core.h"
+#include <string>
 
 namespace Launch
 {
@@ -35,6 +36,12 @@ namespace Launch
         /// </summary>
         /// <returns></returns>
         Vector3 getNormalized();
+
+        /// <summary>
+        /// Returns a string representation of this vector.
+        /// </summary>
+        /// <returns></returns>
+        std::string toString();
 
         /// <summary>
         /// Returns the normalized version of a the vector passed in.

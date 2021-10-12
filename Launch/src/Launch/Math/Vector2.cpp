@@ -23,6 +23,15 @@ Launch::Vector2 Launch::Vector2::getNormalized()
     return normalize(*this);
 }
 
+std::string Launch::Vector2::toString()
+{
+    return std::string("(" +
+        std::to_string(x) +
+        ", " +
+        std::to_string(y) +
+        ")");
+}
+
 Launch::Vector2 Launch::Vector2::normalize(Vector2 vector)
 {
     if (vector.getMagnitude() == 0)

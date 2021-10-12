@@ -25,6 +25,17 @@ Launch::Vector3 Launch::Vector3::getNormalized()
     return normalize(*this);
 }
 
+std::string Launch::Vector3::toString()
+{
+    return std::string("(" +
+        std::to_string(x) +
+        ", " +
+        std::to_string(y) +
+        ", " +
+        std::to_string(z) +
+        ")");
+}
+
 Launch::Vector3 Launch::Vector3::normalize(Vector3 vector)
 {
     if (vector.getMagnitude() == 0)

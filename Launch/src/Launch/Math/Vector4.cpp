@@ -24,6 +24,19 @@ Launch::Vector4 Launch::Vector4::getNormalized()
     return normalize(*this);
 }
 
+std::string Launch::Vector4::toString()
+{
+    return std::string("(" + 
+                        std::to_string(x) +
+                       ", " +
+                        std::to_string(y) +
+                       ", " +
+                        std::to_string(z) +
+                       ", " +
+                        std::to_string(w) +
+                       ")");
+}
+
 Launch::Vector4 Launch::Vector4::normalize(Vector4 vector)
 {
     if (vector.getMagnitude() == 0)
