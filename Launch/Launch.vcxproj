@@ -143,9 +143,11 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Launch\ObjectTest.h" />
     <ClInclude Include="src\Launch.h" />
     <ClInclude Include="src\Launch\Application.h" />
     <ClInclude Include="src\Launch\Core.h" />
+    <ClInclude Include="src\Launch\EngineObject.h" />
     <ClInclude Include="src\Launch\EntryPoint.h" />
     <ClInclude Include="src\Launch\Graphics\Graphics.h" />
     <ClInclude Include="src\Launch\Log.h" />
@@ -157,6 +159,7 @@
     <ClInclude Include="src\Launch\Transform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Launch\ObjectTest.cpp" />
     <ClCompile Include="src\Launch\Application.cpp" />
     <ClCompile Include="src\Launch\Graphics\Graphics.cpp" />
     <ClCompile Include="src\Launch\Log.cpp" />
