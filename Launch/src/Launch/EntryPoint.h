@@ -13,7 +13,8 @@ int main(int argc, char** argv)
 
 	// Initialize Graphics
 	LN_CORE_INFO("Initializing Graphics...");
-	Launch::Graphics::Init();
+	Launch::Graphics graphics = Launch::Graphics();
+	graphics.Init();
 	LN_CORE_INFO("Graphics Initialized");
 
 	// Launch client application

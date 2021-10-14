@@ -27,7 +27,6 @@
     <ClInclude Include="src\Launch\Graphics\Graphics.h" />
     <ClInclude Include="src\Launch\Transform.h" />
     <ClInclude Include="src\Launch\EngineObject.h" />
-    <ClInclude Include="src\Launch\ObjectTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Launch\Application.cpp">
@@ -43,6 +42,5 @@
     <ClCompile Include="src\Launch\Math\Vector4.cpp" />
     <ClCompile Include="src\Launch\Graphics\Graphics.cpp" />
     <ClCompile Include="src\Launch\Transform.cpp" />
-    <ClCompile Include="src\Launch\ObjectTest.cpp" />
   </ItemGroup>
 </Project>
