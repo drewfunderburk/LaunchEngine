@@ -1,15 +1,16 @@
 #pragma once
+#include "Core.h"
 
 namespace Launch
 {
-	class Time
+	class LAUNCH_API Time
 	{
 	private:
 		Time() {}
 		~Time() {}
 
 	public:
-		static float getDeltaTime() { return m_deltaTime; }
+		inline static float getDeltaTime() { return m_deltaTime; }
 
 	private:
 		static float m_deltaTime;

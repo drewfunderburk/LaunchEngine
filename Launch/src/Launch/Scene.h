@@ -1,10 +1,11 @@
 #pragma once
+#include "Core.h"
 #include "EngineObject.h"
 #include <vector>
 
 namespace Launch
 {
-	class Scene : public EngineObject
+	class LAUNCH_API Scene : public EngineObject
 	{
 		class Actor;
 	public:
@@ -15,6 +16,7 @@ namespace Launch
 		void update();
 		void end();
 
+		
 	private:
 		std::vector<Actor*> m_actors;
 	};

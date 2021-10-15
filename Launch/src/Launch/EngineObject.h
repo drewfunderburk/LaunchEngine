@@ -1,8 +1,9 @@
 #pragma once
+#include "Core.h"
 
 namespace Launch
 {
-	class EngineObject
+	class LAUNCH_API EngineObject
 	{
 	public:
 		EngineObject() {}
