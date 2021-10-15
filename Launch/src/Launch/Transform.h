@@ -7,6 +7,7 @@ namespace Launch
 {
 	class LAUNCH_API Transform
 	{
+		friend class Actor;
 	public:
 		Transform() {}
 		~Transform() {}
@@ -33,11 +34,10 @@ namespace Launch
 		Vector3 getScale();
 		void setScale(Vector3 scale);
 
-		Transform* getParent() { return m_parent; }
-		void setParent(Transform* parent) { m_parent = parent; }
+		Actor* getActor() { return m_actor; }
 
 	private:
-		Transform* m_parent = nullptr;
+		Actor* m_actor = nullptr;
 		Matrix4 m_localTransformMatrix = Matrix4();
 		Matrix4 m_globalTransformMatrix = Matrix4();
 	};
