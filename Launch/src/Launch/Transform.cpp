@@ -1,5 +1,6 @@
 #include "Transform.h"
 #include "Log.h"
+#include "Actor.h"
 
 Launch::Vector3 Launch::Transform::getForward()
 {
@@ -13,8 +14,9 @@ Launch::Vector3 Launch::Transform::getWorldPosition()
 
 void Launch::Transform::setWorldPosition(Vector3 position)
 {
-	if (m_parent)
-		setLocalPosition(position + m_parent->getWorldPosition());
+	if (Actor* actor = getActor())
+		if (Actor* parent = actor->getParent())
+		setLocalPosition(position + parent->getTransform().getWorldPosition());
 	else
 		setLocalPosition(position);
 }

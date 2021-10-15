@@ -1,20 +1,28 @@
 #pragma once
 #include "EngineObject.h"
 #include "Transform.h"
+#include "Components/Component.h"
 #include <vector>
 
 namespace Launch
 {
 	class Actor : public EngineObject
 	{
-		class Component;
 	public:
 		Actor();
-		virtual ~Actor() {}
+		virtual ~Actor();
 
 		virtual void start() override;
 		virtual void update() override;
 		virtual void end() override;
+
+		Component* addComponent(Component* component);
+
+		Transform getTransform() { return m_transform; }
+		void setTransform(Transform transform) { m_transform = transform; }
+
+		Actor* getParent() { return m_parent; }
+		void setParent(Actor* parent) { m_parent = parent; }
 
 		template<typename T>
 		T* getComponent()
@@ -29,7 +37,7 @@ namespace Launch
 
 	private:
 		Transform m_transform;
-		Actor* m_parent = null;
+		Actor* m_parent = nullptr;
 		std::vector<Actor*> m_children;
 		std::vector<Component*> m_components;
 	};

@@ -150,7 +150,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Launch.h" />
+    <ClInclude Include="src\Launch\Actor.h" />
     <ClInclude Include="src\Launch\Application.h" />
+    <ClInclude Include="src\Launch\Components\Component.h" />
     <ClInclude Include="src\Launch\Core.h" />
     <ClInclude Include="src\Launch\EngineObject.h" />
     <ClInclude Include="src\Launch\EntryPoint.h" />
@@ -164,7 +166,9 @@
     <ClInclude Include="src\Launch\Transform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Launch\Actor.cpp" />
     <ClCompile Include="src\Launch\Application.cpp" />
+    <ClCompile Include="src\Launch\Components\Component.cpp" />
     <ClCompile Include="src\Launch\Graphics\Graphics.cpp" />
     <ClCompile Include="src\Launch\Log.cpp" />
     <ClCompile Include="src\Launch\Math\Matrix3.cpp" />
