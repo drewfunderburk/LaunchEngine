@@ -1,5 +1,6 @@
 #include "Graphics.h"
 #include "../Log.h"
+#include <string>
 
 void Launch::Graphics::Init()
 {
@@ -9,7 +10,9 @@ void Launch::Graphics::Init()
 		LN_CORE_ERROR("Could not initialize GLFW!");
 		return;
 	}
-	LN_CORE_TRACE(glfwGetVersionString());
+	std::string str = "OpenGL version: ";
+	std::string version = glfwGetVersionString();
+	LN_CORE_TRACE((str + version).c_str());
 
 	LN_CORE_TRACE("Creating OpenGL window...");
 	m_window = glfwCreateWindow(m_screenWidth, m_screenHeight, m_screenTitle, nullptr, nullptr);
