@@ -15,4 +15,13 @@ namespace Launch
 	{
 		system("pause");
 	}
+	void Application::start()
+	{
+	}
+	void Application::update()
+	{
+	}
+	void Application::end()
+	{
+	}
 }
