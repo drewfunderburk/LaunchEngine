@@ -163,6 +163,8 @@
     <ClInclude Include="src\Launch\Math\Vector2.h" />
     <ClInclude Include="src\Launch\Math\Vector3.h" />
     <ClInclude Include="src\Launch\Math\Vector4.h" />
+    <ClInclude Include="src\Launch\Scene.h" />
+    <ClInclude Include="src\Launch\Time.h" />
     <ClInclude Include="src\Launch\Transform.h" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +178,7 @@
     <ClCompile Include="src\Launch\Math\Vector2.cpp" />
     <ClCompile Include="src\Launch\Math\Vector3.cpp" />
     <ClCompile Include="src\Launch\Math\Vector4.cpp" />
+    <ClCompile Include="src\Launch\Scene.cpp" />
     <ClCompile Include="src\Launch\Transform.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -11,8 +11,8 @@ namespace Launch
 		Graphics() {}
 		~Graphics() {}
 
-		void Init();
-		void Terminate();
+		void init();
+		void terminate();
 
 		int getScreenWidth() { return m_screenWidth; }
 		void setScreenWidth(int width) { m_screenWidth = width; }

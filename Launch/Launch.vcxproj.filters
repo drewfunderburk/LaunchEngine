@@ -29,6 +29,8 @@
     <ClInclude Include="src\Launch\EngineObject.h" />
     <ClInclude Include="src\Launch\Actor.h" />
     <ClInclude Include="src\Launch\Components\Component.h" />
+    <ClInclude Include="src\Launch\Time.h" />
+    <ClInclude Include="src\Launch\Scene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Launch\Application.cpp">
@@ -46,5 +48,6 @@
     <ClCompile Include="src\Launch\Transform.cpp" />
     <ClCompile Include="src\Launch\Actor.cpp" />
     <ClCompile Include="src\Launch\Components\Component.cpp" />
+    <ClCompile Include="src\Launch\Scene.cpp" />
   </ItemGroup>
 </Project>

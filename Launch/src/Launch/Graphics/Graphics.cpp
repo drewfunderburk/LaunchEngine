@@ -2,7 +2,7 @@
 #include "../Log.h"
 #include <string>
 
-void Launch::Graphics::Init()
+void Launch::Graphics::init()
 {
 	LN_CORE_TRACE("Initializing GLFW...");
 	if (!glfwInit())
@@ -25,7 +25,7 @@ void Launch::Graphics::Init()
 	glfwMakeContextCurrent(m_window);
 }
 
-void Launch::Graphics::Terminate()
+void Launch::Graphics::terminate()
 {
 	if (!m_window)
 	{
