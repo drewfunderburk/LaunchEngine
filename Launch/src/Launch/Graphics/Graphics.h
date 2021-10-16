@@ -22,6 +22,18 @@ namespace Launch
 		void setTitle(const char * title) { m_screenTitle = title; }
 
 	private:
+		void APIENTRY debugCallback
+		(
+			GLenum source,
+			GLenum type,
+			unsigned int id,
+			GLenum severity,
+			GLsizei length,
+			const char* message,
+			const void* userParam
+		);
+
+	private:
 		GLFWwindow* m_window = nullptr;
 
 		int m_screenWidth = 1280;
