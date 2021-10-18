@@ -1,5 +1,4 @@
 #pragma once
-
 #include "../Core.h"
 #include <GLFW/glfw3.h>
 
@@ -20,18 +19,6 @@ namespace Launch
 		void setScreenHeight(int height) { m_screenHeight = height; }
 		const char* getTitle() { return m_screenTitle; }
 		void setTitle(const char * title) { m_screenTitle = title; }
-
-	private:
-		void APIENTRY debugCallback
-		(
-			GLenum source,
-			GLenum type,
-			unsigned int id,
-			GLenum severity,
-			GLsizei length,
-			const char* message,
-			const void* userParam
-		);
 
 	private:
 		GLFWwindow* m_window = nullptr;

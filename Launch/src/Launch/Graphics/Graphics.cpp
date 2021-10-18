@@ -1,8 +1,13 @@
 #include "GL/glew.h"
-
 #include <string>
 #include "Graphics.h"
 #include "../Log.h"
+
+void debugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const char* message, const void* userParam)
+{
+	std::string str = "GL CALLBACK: type = " + std::to_string(type) + ", severity = " + std::to_string(severity) + ", message = " + message + "\n";
+	LN_CORE_ERROR(str);
+}
 
 void Launch::Graphics::init()
 {
@@ -12,8 +17,6 @@ void Launch::Graphics::init()
 		LN_CORE_ERROR("Could not initialize GLFW!");
 		return;
 	}
-	//glEnable(GL_DEBUG_OUTPUT);
-	//glDebugMessageCallback(debugCallback, NULL);
 
 	std::string str = "GLFW version: ";
 	std::string version = glfwGetVersionString();
@@ -39,6 +42,8 @@ void Launch::Graphics::init()
 	version = (const char*)glGetString(GL_VERSION);
 	LN_CORE_TRACE((str + version).c_str());
 
+	glEnable(GL_DEBUG_OUTPUT);
+	glDebugMessageCallback(debugCallback, nullptr);
 }
 
 void Launch::Graphics::terminate()
@@ -53,10 +58,4 @@ void Launch::Graphics::terminate()
 	glfwDestroyWindow(m_window);
 
 	LN_CORE_TRACE("Terminating GLFW...");
-}
-
-void APIENTRY Launch::Graphics::debugCallback(GLenum source, GLenum type, unsigned int id, GLenum severity, GLsizei length, const char* message, const void* userParam)
-{
-	std::string str = "GL CALLBACK: type = " + std::to_string(type) + ", severity = " + std::to_string(severity) + ", message = " + message + "\n";
-	LN_CORE_ERROR(str);
 }
