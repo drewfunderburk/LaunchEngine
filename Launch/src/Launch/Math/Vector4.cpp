@@ -1,5 +1,6 @@
 #include "Vector4.h"
 #include <cmath>
+#include <string>
 
 Launch::Vector4::Vector4()
 {
@@ -32,7 +33,7 @@ Launch::Vector4 Launch::Vector4::getNormalized()
     return normalize(*this);
 }
 
-std::string Launch::Vector4::toString()
+const char* Launch::Vector4::toString()
 {
     return std::string("(" + 
                         std::to_string(x) +
@@ -42,7 +43,7 @@ std::string Launch::Vector4::toString()
                         std::to_string(z) +
                        ", " +
                         std::to_string(w) +
-                       ")");
+                       ")").c_str();
 }
 
 Launch::Vector4 Launch::Vector4::normalize(Vector4 vector)

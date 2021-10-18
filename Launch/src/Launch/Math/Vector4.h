@@ -1,7 +1,6 @@
 #pragma once
 #include "../Core.h"
 #include "Vector3.h"
-#include <string>
 
 namespace Launch
 {
@@ -44,7 +43,7 @@ namespace Launch
         /// Returns a string representation of this vector.
         /// </summary>
         /// <returns></returns>
-        std::string toString();
+        const char* toString();
 
         /// <summary>
         /// Returns the normalized version of the vector passed in.
@@ -85,6 +84,18 @@ namespace Launch
         /// <param name="end">Ending position</param>
         /// <returns></returns>
         static float distance(Vector4 start, Vector4 end);
+
+        /// <summary>
+        /// Shorthand for Vector4(0.0f, 0.0f, 0.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector4 zero() { return Vector4(0.0f, 0.0f, 0.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector4(1.0f, 1.0f, 1.0f, 1.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector4 one() { return Vector4(1.0f, 1.0f, 1.0f, 1.0f); }
     };
 }
 

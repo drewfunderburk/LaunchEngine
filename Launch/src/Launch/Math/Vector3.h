@@ -1,7 +1,6 @@
 #pragma once
 #include "../Core.h"
 #include "Vector2.h"
-#include <string>
 
 namespace Launch
 {
@@ -43,7 +42,7 @@ namespace Launch
         /// Returns a string representation of this vector.
         /// </summary>
         /// <returns></returns>
-        std::string toString();
+        const char* toString();
 
         /// <summary>
         /// Returns the normalized version of a the vector passed in.
@@ -84,6 +83,54 @@ namespace Launch
         /// <param name="end">Ending position</param>
         /// <returns></returns>
         static float distance(Vector3 start, Vector3 end);
+
+        /// <summary>
+        /// Shorthand for Vector3(0.0f, 0.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 zero() { return Vector3(0.0f, 0.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector3(1.0f, 1.0f, 1.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 one() { return Vector3(1.0f, 1.0f, 1.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector3(0.0f, 1.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 up() { return Vector3(0.0f, 1.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector3(0.0f, -1.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 down() { return Vector3(0.0f, -1.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector3(1.0f, 0.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 right() { return Vector3(1.0f, 0.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector3(-1.0f, 0.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 left() { return Vector3(-1.0f, 0.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector3(0.0f, 0.0f, 1.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 forward() { return Vector3(0.0f, 0.0f, 1.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector3(0.0f, 0.0f, -1.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector3 back() { return Vector3(0.0f, 0.0f, -1.0f); }
     };
 }
 

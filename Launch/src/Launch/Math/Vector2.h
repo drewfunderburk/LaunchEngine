@@ -1,6 +1,5 @@
 #pragma once
 #include "../Core.h"
-#include <string>
 
 namespace Launch
 {
@@ -40,7 +39,7 @@ namespace Launch
         /// Returns a string representation of this vector.
         /// </summary>
         /// <returns></returns>
-        std::string toString();
+        const char* toString();
 
         /// <summary>
         /// Returns the normalized version of the vector passed in.
@@ -81,6 +80,42 @@ namespace Launch
         /// <param name="end">Ending position</param>
         /// <returns></returns>
         static float distance(Vector2 start, Vector2 end);
+
+        /// <summary>
+        /// Shorthand for Vector2(0.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector2 zero() { return Vector2(0.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector2(1.0f, 1.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector2 zero() { return Vector2(1.0f, 1.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector2(0.0f, 1.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector2 up() { return Vector2(0.0f, 1.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector2(0.0f, -1.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector2 down() { return Vector2(0.0f, -1.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector2(1.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector2 right() { return Vector2(1.0f, 0.0f); }
+
+        /// <summary>
+        /// Shorthand for Vector2(-1.0f, 0.0f)
+        /// </summary>
+        /// <returns></returns>
+        static Vector2 left() { return Vector2(-1.0f, 0.0f); }
     };
 }
 
