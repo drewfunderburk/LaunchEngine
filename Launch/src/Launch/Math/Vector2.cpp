@@ -1,6 +1,5 @@
 #include "Vector2.h"
 #include <cmath>
-#include <string>
 
 Launch::Vector2::Vector2()
 {
@@ -24,13 +23,13 @@ Launch::Vector2 Launch::Vector2::getNormalized()
     return normalize(*this);
 }
 
-const char* Launch::Vector2::toString()
+std::string Launch::Vector2::toString()
 {
     return std::string("(" +
-        std::to_string(x) +
-        ", " +
-        std::to_string(y) +
-        ")").c_str();
+                        std::to_string(x) +
+                       ", " +
+                        std::to_string(y) +
+                       ")");
 }
 
 Launch::Vector2 Launch::Vector2::normalize(Vector2 vector)

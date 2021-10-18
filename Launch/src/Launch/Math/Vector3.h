@@ -1,6 +1,7 @@
 #pragma once
 #include "../Core.h"
 #include "Vector2.h"
+#include <string>
 
 namespace Launch
 {
@@ -42,7 +43,7 @@ namespace Launch
         /// Returns a string representation of this vector.
         /// </summary>
         /// <returns></returns>
-        const char* toString();
+        std::string toString();
 
         /// <summary>
         /// Returns the normalized version of a the vector passed in.
