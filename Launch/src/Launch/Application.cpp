@@ -46,7 +46,7 @@ namespace Launch
 		}
 	}
 
-	Scene* Application::getScene(int index)
+	Scene* Application::getScene(int index) const
 	{
 		if (index < 0 || index > m_scenes.size())
 			return nullptr;

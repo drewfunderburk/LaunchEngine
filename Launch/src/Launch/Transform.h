@@ -21,20 +21,20 @@ namespace Launch
 		void lookAt(Vector3 position);
 		void lookAt(Transform* transform);
 
-		Vector3 getRight();
-		Vector3 getUp();
-		Vector3 getForward();
+		Vector3 getRight() const;
+		Vector3 getUp() const;
+		Vector3 getForward() const;
 
-		Vector3 getWorldPosition();
+		Vector3 getWorldPosition() const;
 		void setWorldPosition(Vector3 position);
-		Vector3 getLocalPosition();
+		Vector3 getLocalPosition() const;
 		void setLocalPosition(Vector3 position);
-		Vector3 getRotation();
+		Vector3 getRotation() const;
 		void setRotation(Vector3 rotation);
-		Vector3 getScale();
+		Vector3 getScale() const;
 		void setScale(Vector3 scale);
 
-		Actor* getActor() { return m_actor; }
+		Actor* getActor() const { return m_actor; }
 
 	private:
 		Actor* m_actor = nullptr;

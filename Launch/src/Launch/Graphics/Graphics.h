@@ -13,11 +13,11 @@ namespace Launch
 		void init();
 		void terminate();
 
-		int getScreenWidth() { return m_screenWidth; }
+		int getScreenWidth() const { return m_screenWidth; }
 		void setScreenWidth(int width) { m_screenWidth = width; }
-		int getScreenHeight() { return m_screenHeight; }
+		int getScreenHeight() const { return m_screenHeight; }
 		void setScreenHeight(int height) { m_screenHeight = height; }
-		const char* getTitle() { return m_screenTitle; }
+		const char* getTitle() const { return m_screenTitle; }
 		void setTitle(const char * title) { m_screenTitle = title; }
 
 	private:

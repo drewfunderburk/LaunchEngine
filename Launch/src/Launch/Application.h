@@ -20,7 +20,7 @@ namespace Launch
 
 		void addScene(Scene* scene);
 		void removeScene(Scene* scene);
-		Scene* getScene(int index);
+		Scene* getScene(int index) const;
 
 		static Scene* getCurrentScene() { return m_currentScene; }
 		static void setCurrentScene(Scene* scene) { m_currentScene = scene; }

@@ -18,14 +18,14 @@ namespace Launch
 
 		Component* addComponent(Component* component);
 
-		Transform getTransform() { return m_transform; }
+		Transform getTransform() const { return m_transform; }
 		void setTransform(Transform transform) { m_transform = transform; }
 
-		Actor* getParent() { return m_parent; }
+		Actor* getParent() const { return m_parent; }
 		void setParent(Actor* parent) { m_parent = parent; }
 
 		template<typename T>
-		T* getComponent()
+		T* getComponent() const
 		{
 			for each (Component* component in m_components)
 			{
