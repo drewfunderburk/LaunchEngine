@@ -42,6 +42,7 @@ void Launch::Graphics::init()
 	version = (const char*)glGetString(GL_VERSION);
 	LN_CORE_TRACE((str + version).c_str());
 
+	LN_CORE_TRACE("Setting up OpenGL Debug...");
 	glEnable(GL_DEBUG_OUTPUT);
 	glDebugMessageCallback(debugCallback, nullptr);
 }
