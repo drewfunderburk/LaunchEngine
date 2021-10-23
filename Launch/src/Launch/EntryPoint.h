@@ -12,8 +12,7 @@ int main(int argc, char** argv)
 
 	// Initialize Graphics
 	LN_CORE_INFO("Initializing Graphics...");
-	Launch::Graphics graphics = Launch::Graphics();
-	graphics.init();
+	Launch::Graphics::init();
 
 	// Launch client application
 	LN_CORE_INFO("Launching Application...");
@@ -22,7 +21,7 @@ int main(int argc, char** argv)
 	delete app;
 
 	LN_CORE_INFO("Closing window...");
-	graphics.terminate();
+	Launch::Graphics::terminate();
 
 	LN_CORE_INFO("Closing Launch");
 	return 0;

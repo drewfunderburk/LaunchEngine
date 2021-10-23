@@ -1,30 +1,29 @@
 #pragma once
 #include "../Core.h"
-#include <GLFW/glfw3.h>
+#include "IGraphicsAPI.h"
 
 namespace Launch
 {
 	class LAUNCH_API Graphics
 	{
-	public:
+	private:
 		Graphics() {}
 		~Graphics() {}
 
-		void init();
-		void terminate();
+	public:
 
-		int getScreenWidth() const { return m_screenWidth; }
-		void setScreenWidth(int width) { m_screenWidth = width; }
-		int getScreenHeight() const { return m_screenHeight; }
-		void setScreenHeight(int height) { m_screenHeight = height; }
-		const char* getTitle() const { return m_screenTitle; }
-		void setTitle(const char * title) { m_screenTitle = title; }
+		static void init();
+		static void terminate();
+
+		static int getScreenWidth();
+		static void setScreenWidth(int width);
+		static int getScreenHeight();
+		static void setScreenHeight(int height);
+		static const char* getTitle();
+		static void setTitle(const char* title);
 
 	private:
-		GLFWwindow* m_window = nullptr;
-
-		int m_screenWidth = 1280;
-		int m_screenHeight = 720;
-		const char* m_screenTitle = "LaunchEngine";
+		static IGraphicsAPI* m_graphicsAPI;
+		
 	};
 }

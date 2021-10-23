@@ -31,6 +31,8 @@
     <ClInclude Include="src\Launch\Components\Component.h" />
     <ClInclude Include="src\Launch\Time.h" />
     <ClInclude Include="src\Launch\Scene.h" />
+    <ClInclude Include="src\Launch\Graphics\OpenGL.h" />
+    <ClInclude Include="src\Launch\Graphics\IGraphicsAPI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Launch\Application.cpp">
@@ -49,5 +51,6 @@
     <ClCompile Include="src\Launch\Actor.cpp" />
     <ClCompile Include="src\Launch\Components\Component.cpp" />
     <ClCompile Include="src\Launch\Scene.cpp" />
+    <ClCompile Include="src\Launch\Graphics\OpenGL.cpp" />
   </ItemGroup>
 </Project>
