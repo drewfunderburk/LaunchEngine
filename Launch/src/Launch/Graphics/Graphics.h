@@ -14,6 +14,7 @@ namespace Launch
 
 		static void init();
 		static void terminate();
+		static void draw();
 
 		static int getScreenWidth();
 		static void setScreenWidth(int width);

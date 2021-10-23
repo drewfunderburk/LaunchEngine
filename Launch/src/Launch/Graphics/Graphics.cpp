@@ -18,6 +18,11 @@ void Launch::Graphics::terminate()
 	delete m_graphicsAPI;
 }
 
+void Launch::Graphics::draw()
+{
+	m_graphicsAPI->draw();
+}
+
 int Launch::Graphics::getScreenWidth()
 {
 	return m_graphicsAPI->getScreenWidth();

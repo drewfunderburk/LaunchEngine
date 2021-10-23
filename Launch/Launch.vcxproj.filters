@@ -53,4 +53,7 @@
     <ClCompile Include="src\Launch\Scene.cpp" />
     <ClCompile Include="src\Launch\Graphics\OpenGL.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Launch\Graphics\Shaders\OpenGL_Basic.shader" />
+  </ItemGroup>
 </Project>

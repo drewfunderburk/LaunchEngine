@@ -1,6 +1,5 @@
 #include "OpenGL.h"
 #include "../Log.h"
-#include "GL/glew.h"
 #include <string>
 
 void debugCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const char* message, const void* userParam)
@@ -59,4 +58,43 @@ void Launch::OpenGL::terminate()
 	glfwDestroyWindow(m_window);
 
 	LN_CORE_TRACE("Terminating GLFW...");
+}
+
+void Launch::OpenGL::draw()
+{
+	float positions[6] =
+	{
+		-0.5f, -0.5f,
+		 0.0f,  0.5f,
+		 0.5f, -0.5f
+	};
+
+	// Vertex buffer
+	unsigned int buffer;
+	glGenBuffers(1, &buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, buffer);
+	glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
+
+	// Vertex attribute
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
+
+	// Rendering
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	glDrawArrays(GL_TRIANGLES, 0, 3);
+
+
+	// Swap front and back buffers
+	glfwSwapBuffers(m_window);
+
+	// Poll and process events
+	glfwPollEvents();
+}
+
+int Launch::OpenGL::createShader(const char* vertexShader, const char* fragmentShader)
+{
+	unsigned int program = glCreateProgram();
+	unsigned int vs = glCreateShader(GL_VERTEX_SHADER);
+	return 0;
 }

@@ -184,6 +184,9 @@
     <ClCompile Include="src\Launch\Scene.cpp" />
     <ClCompile Include="src\Launch\Transform.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Launch\Graphics\Shaders\OpenGL_Basic.shader" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

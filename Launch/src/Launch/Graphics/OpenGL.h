@@ -14,6 +14,7 @@ namespace Launch
 
 		void init();
 		void terminate();
+		void draw();
 
 		int getScreenWidth() const { return m_screenWidth; }
 		void setScreenWidth(int width) { m_screenWidth = width; }
@@ -23,6 +24,10 @@ namespace Launch
 
 		const char* getTitle() const { return m_screenTitle; }
 		void setTitle(const char* title) { m_screenTitle = title; }
+
+	private:
+		int createShader(const char* vertexShader, const char* fragmentShader);
+		int compileShader(const char* source, unsigned int type);
 
 	private:
 		GLFWwindow* m_window = nullptr;

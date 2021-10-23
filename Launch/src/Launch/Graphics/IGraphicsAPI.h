@@ -8,6 +8,7 @@ namespace Launch
 	public:
 		virtual void init() {}
 		virtual void terminate() {}
+		virtual void draw() {}
 
 		virtual int getScreenWidth() const { return -1; }
 		virtual void setScreenWidth(int width) {}
