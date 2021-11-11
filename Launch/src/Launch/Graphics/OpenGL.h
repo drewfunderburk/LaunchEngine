@@ -8,6 +8,12 @@ namespace Launch
 {
 	class LAUNCH_API OpenGL : public IGraphicsAPI
 	{
+		struct ShaderProgramSource
+		{
+			const char* VertexSource;
+			const char* FragmentSource;
+		};
+
 	public:
 		OpenGL() {}
 		~OpenGL() {}
@@ -26,8 +32,9 @@ namespace Launch
 		void setTitle(const char* title) { m_screenTitle = title; }
 
 	private:
-		int createShader(const char* vertexShader, const char* fragmentShader);
-		int compileShader(const char* source, unsigned int type);
+		unsigned int compileShader(unsigned int type, const char* source);
+		unsigned int createShader(const char* vertexShader, const char* fragmentShader);
+		ShaderProgramSource parseShader(const char* filePath);
 
 	private:
 		GLFWwindow* m_window = nullptr;
