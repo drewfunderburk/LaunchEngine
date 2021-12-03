@@ -34,7 +34,7 @@ namespace Launch
 
 	private:
 		unsigned int compileShader(unsigned int type, const char* source);
-		unsigned int createShader(const char* vertexShader, const char* fragmentShader);
+		unsigned int createShader(std::string vertexShader, std::string fragmentShader);
 		ShaderProgramSource parseShader(const char* filePath);
 
 	private:

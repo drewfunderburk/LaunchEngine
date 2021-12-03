@@ -83,7 +83,7 @@ void Launch::OpenGL::draw()
 	const char* filePath = "src/Shaders/OpenGL_Basic.shader";
 
 	ShaderProgramSource source = parseShader(filePath);
-	unsigned int shader = createShader(source.VertexSource.c_str(), source.FragmentSource.c_str());
+	unsigned int shader = createShader(source.VertexSource, source.FragmentSource);
 	glUseProgram(shader);
 
 	// Rendering
@@ -123,13 +123,13 @@ unsigned int Launch::OpenGL::compileShader(unsigned int type, const char* source
 	return id;
 }
 
-unsigned int Launch::OpenGL::createShader(const char* vertexShader, const char* fragmentShader)
+unsigned int Launch::OpenGL::createShader(std::string vertexShader, std::string fragmentShader)
 {
 	unsigned int program = glCreateProgram();
 	LN_CORE_TRACE("Compiling vertex shader...");
-	unsigned int vs = compileShader(GL_VERTEX_SHADER, vertexShader);
+	unsigned int vs = compileShader(GL_VERTEX_SHADER, vertexShader.c_str());
 	LN_CORE_TRACE("Compiling fragment shader...");
-	unsigned int fs = compileShader(GL_FRAGMENT_SHADER, fragmentShader);
+	unsigned int fs = compileShader(GL_FRAGMENT_SHADER, fragmentShader.c_str());
 
 	glAttachShader(program, vs);
 	glAttachShader(program, fs);
