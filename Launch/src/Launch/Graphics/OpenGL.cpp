@@ -1,6 +1,5 @@
 #include "OpenGL.h"
 #include "../Log.h"
-#include <string>
 #include <fstream>
 #include <sstream>
 
@@ -82,16 +81,9 @@ void Launch::OpenGL::draw()
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
 
 	const char* filePath = "src/Shaders/OpenGL_Basic.shader";
-	char fullPath[_MAX_PATH];
-	if (_fullpath(fullPath, filePath, _MAX_PATH) != NULL)
-		printf("Full path is: %s\n", fullPath);
-	else
-		printf("Invalid path\n");
 
 	ShaderProgramSource source = parseShader(filePath);
-	LN_CORE_WARN(source.VertexSource);
-	LN_CORE_WARN(source.FragmentSource);
-	unsigned int shader = createShader(source.VertexSource, source.FragmentSource);
+	unsigned int shader = createShader(source.VertexSource.c_str(), source.FragmentSource.c_str());
 	glUseProgram(shader);
 
 	// Rendering
@@ -113,7 +105,6 @@ unsigned int Launch::OpenGL::compileShader(unsigned int type, const char* source
 	glShaderSource(id, 1, &source, nullptr);
 	glCompileShader(id);
 
-	// TODO: Shader error handling
 	int result;
 	glGetShaderiv(id, GL_COMPILE_STATUS, &result);
 	if (result == GL_FALSE)
@@ -175,5 +166,5 @@ Launch::OpenGL::ShaderProgramSource Launch::OpenGL::parseShader(const char* file
 			sStream[(int)type] << line << "\n";
 	}
 
-	return { sStream[0].str().c_str(), sStream[1].str().c_str() };
+	return { sStream[0].str(), sStream[1].str() };
 }

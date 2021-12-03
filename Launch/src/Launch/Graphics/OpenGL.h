@@ -3,6 +3,7 @@
 #include "IGraphicsAPI.h"
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
+#include <string>
 
 namespace Launch
 {
@@ -10,8 +11,8 @@ namespace Launch
 	{
 		struct ShaderProgramSource
 		{
-			const char* VertexSource;
-			const char* FragmentSource;
+			std::string VertexSource;
+			std::string FragmentSource;
 		};
 
 	public:
