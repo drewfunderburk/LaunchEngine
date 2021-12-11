@@ -100,7 +100,7 @@ void Launch::OpenGL::draw()
 
 	unsigned int location = glGetUniformLocation(shader, "uColor");
 	ASSERT(location != -1);
-	glUniform4f(location, 0.4f, 0.0f, 0.4f, 1.0f);
+	glUniform4f(location, 0.6f, 0.2f, 0.4f, 1.0f);
 
 	// Rendering
 	glClear(GL_COLOR_BUFFER_BIT);

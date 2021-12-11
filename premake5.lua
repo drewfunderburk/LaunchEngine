@@ -95,6 +95,11 @@ project "Sandbox"
 		"Launch/src"
 	}
 
+	links
+	{
+		"Launch"
+	}
+
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"

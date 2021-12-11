@@ -133,6 +133,11 @@
   <ItemGroup>
     <ClCompile Include="src\Sandbox.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Launch\Launch.vcxproj">
+      <Project>{E06644C0-CC08-6F96-B5C3-82EAA104F6E6}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
