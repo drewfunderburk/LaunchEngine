@@ -9,3 +9,5 @@
 #else
 	#error Launch only supports Windows!
 #endif
+
+#define ASSERT(x) if (!(x)) __debugbreak()
