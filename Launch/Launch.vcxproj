@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>LN_PLATFORM_WINDOWS;LN_BUILD_DLL;GLEW_STATIC;LN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;$(SolutionDir)Launch\vendor\glfw-3.3.4.bin.WIN64\include;$(SolutionDir)Launch\vendor\glew-2.1.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -88,12 +88,13 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ImportLibrary>..\bin\Debug-windows-x86_64\Launch\Launch.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(SolutionDir)Launch\vendor\glfw-3.3.4.bin.WIN64\lib-vc2019;$(SolutionDir)Launch\vendor\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glfw3.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>vendor\glfw-3.3.4.bin.WIN64\lib-vc2019;vendor\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Debug-windows-x86_64\Launch\Launch.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)
+IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -101,25 +102,26 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>LN_PLATFORM_WINDOWS;LN_BUILD_DLL;GLEW_STATIC;LN_Release;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;$(SolutionDir)Launch\vendor\glfw-3.3.4.bin.WIN64\include;$(SolutionDir)Launch\vendor\glew-2.1.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\bin\Release-windows-x86_64\Launch\Launch.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(SolutionDir)Launch\vendor\glfw-3.3.4.bin.WIN64\lib-vc2019;$(SolutionDir)Launch\vendor\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glfw3.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>vendor\glfw-3.3.4.bin.WIN64\lib-vc2019;vendor\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Release-windows-x86_64\Launch\Launch.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)
+IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -127,25 +129,26 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>LN_PLATFORM_WINDOWS;LN_BUILD_DLL;GLEW_STATIC;LN_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;$(SolutionDir)Launch\vendor\glfw-3.3.4.bin.WIN64\include;$(SolutionDir)Launch\vendor\glew-2.1.0\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <ImportLibrary>..\bin\Dist-windows-x86_64\Launch\Launch.lib</ImportLibrary>
-      <AdditionalLibraryDirectories>$(SolutionDir)Launch\vendor\glfw-3.3.4.bin.WIN64\lib-vc2019;$(SolutionDir)Launch\vendor\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glfw3.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>vendor\glfw-3.3.4.bin.WIN64\lib-vc2019;vendor\glew-2.1.0\lib\Release\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Dist-windows-x86_64\Launch\Launch.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)
+IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -183,9 +186,6 @@
     <ClCompile Include="src\Launch\Math\Vector4.cpp" />
     <ClCompile Include="src\Launch\Scene.cpp" />
     <ClCompile Include="src\Launch\Transform.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\Launch\Graphics\Shaders\OpenGL_Basic.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

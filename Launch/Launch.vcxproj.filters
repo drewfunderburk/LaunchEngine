@@ -4,56 +4,112 @@
     <Filter Include="Launch">
       <UniqueIdentifier>{E06644C0-CC08-6F96-B5C3-82EAA104F6E6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Launch\Components">
+      <UniqueIdentifier>{F53F17B7-6156-154D-AACD-A06E1623E6D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Launch\Graphics">
+      <UniqueIdentifier>{20EBC926-8C76-37EB-9587-BADF019293EB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Launch\Math">
+      <UniqueIdentifier>{B917F686-25CD-6E7C-AEC1-68531A766580}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Launch.h" />
+    <ClInclude Include="src\Launch\Actor.h">
+      <Filter>Launch</Filter>
+    </ClInclude>
     <ClInclude Include="src\Launch\Application.h">
       <Filter>Launch</Filter>
     </ClInclude>
+    <ClInclude Include="src\Launch\Components\Component.h">
+      <Filter>Launch\Components</Filter>
+    </ClInclude>
     <ClInclude Include="src\Launch\Core.h">
+      <Filter>Launch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\EngineObject.h">
       <Filter>Launch</Filter>
     </ClInclude>
     <ClInclude Include="src\Launch\EntryPoint.h">
       <Filter>Launch</Filter>
     </ClInclude>
+    <ClInclude Include="src\Launch\Graphics\Graphics.h">
+      <Filter>Launch\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Graphics\IGraphicsAPI.h">
+      <Filter>Launch\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Graphics\OpenGL.h">
+      <Filter>Launch\Graphics</Filter>
+    </ClInclude>
     <ClInclude Include="src\Launch\Log.h">
       <Filter>Launch</Filter>
     </ClInclude>
-    <ClInclude Include="src\Launch\Math\Matrix3.h" />
-    <ClInclude Include="src\Launch\Math\Matrix4.h" />
-    <ClInclude Include="src\Launch\Math\Vector2.h" />
-    <ClInclude Include="src\Launch\Math\Vector3.h" />
-    <ClInclude Include="src\Launch\Math\Vector4.h" />
-    <ClInclude Include="src\Launch\Graphics\Graphics.h" />
-    <ClInclude Include="src\Launch\Transform.h" />
-    <ClInclude Include="src\Launch\EngineObject.h" />
-    <ClInclude Include="src\Launch\Actor.h" />
-    <ClInclude Include="src\Launch\Components\Component.h" />
-    <ClInclude Include="src\Launch\Time.h" />
-    <ClInclude Include="src\Launch\Scene.h" />
-    <ClInclude Include="src\Launch\Graphics\OpenGL.h" />
-    <ClInclude Include="src\Launch\Graphics\IGraphicsAPI.h" />
+    <ClInclude Include="src\Launch\Math\Matrix3.h">
+      <Filter>Launch\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Math\Matrix4.h">
+      <Filter>Launch\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Math\Vector2.h">
+      <Filter>Launch\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Math\Vector3.h">
+      <Filter>Launch\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Math\Vector4.h">
+      <Filter>Launch\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Scene.h">
+      <Filter>Launch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Time.h">
+      <Filter>Launch</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Launch\Transform.h">
+      <Filter>Launch</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Launch\Actor.cpp">
+      <Filter>Launch</Filter>
+    </ClCompile>
     <ClCompile Include="src\Launch\Application.cpp">
       <Filter>Launch</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Components\Component.cpp">
+      <Filter>Launch\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Graphics\Graphics.cpp">
+      <Filter>Launch\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Graphics\OpenGL.cpp">
+      <Filter>Launch\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="src\Launch\Log.cpp">
       <Filter>Launch</Filter>
     </ClCompile>
-    <ClCompile Include="src\Launch\Math\Matrix3.cpp" />
-    <ClCompile Include="src\Launch\Math\Matrix4.cpp" />
-    <ClCompile Include="src\Launch\Math\Vector2.cpp" />
-    <ClCompile Include="src\Launch\Math\Vector3.cpp" />
-    <ClCompile Include="src\Launch\Math\Vector4.cpp" />
-    <ClCompile Include="src\Launch\Graphics\Graphics.cpp" />
-    <ClCompile Include="src\Launch\Transform.cpp" />
-    <ClCompile Include="src\Launch\Actor.cpp" />
-    <ClCompile Include="src\Launch\Components\Component.cpp" />
-    <ClCompile Include="src\Launch\Scene.cpp" />
-    <ClCompile Include="src\Launch\Graphics\OpenGL.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\Launch\Graphics\Shaders\OpenGL_Basic.shader" />
+    <ClCompile Include="src\Launch\Math\Matrix3.cpp">
+      <Filter>Launch\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Math\Matrix4.cpp">
+      <Filter>Launch\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Math\Vector2.cpp">
+      <Filter>Launch\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Math\Vector3.cpp">
+      <Filter>Launch\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Math\Vector4.cpp">
+      <Filter>Launch\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Scene.cpp">
+      <Filter>Launch</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Launch\Transform.cpp">
+      <Filter>Launch</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

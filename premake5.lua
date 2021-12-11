@@ -27,23 +27,40 @@ project "Launch"
 
 	includedirs
 	{
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{prj.name}/vendor/glfw-3.3.4.bin.WIN64/include",
+		"%{prj.name}/vendor/glew-2.1.0/include"
+	}
+
+	libdirs
+	{
+		"%{prj.name}/vendor/glfw-3.3.4.bin.WIN64/lib-vc2019",
+		"%{prj.name}/vendor/glew-2.1.0/lib/Release/x64"
+	}
+
+	links
+	{
+		"glfw3",
+		"glew32s",
+		"opengl32"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "Off"
 		systemversion "latest"
 
 		defines
 		{
 			"LN_PLATFORM_WINDOWS",
-			"LN_BUILD_DLL"
+			"LN_BUILD_DLL",
+			"GLEW_STATIC"
 		}
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"),
+			("{COPY} ../Launch/src/Launch/Graphics/Shaders/OpenGL_Basic.shader ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -76,11 +93,6 @@ project "Sandbox"
 	{
 		"Launch/vendor/spdlog/include",
 		"Launch/src"
-	}
-
-	links
-	{
-		"Launch"
 	}
 
 	filter "system:windows"
