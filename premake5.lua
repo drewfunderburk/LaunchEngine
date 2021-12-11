@@ -60,7 +60,7 @@ project "Launch"
 		postbuildcommands
 		{
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"),
-			("{COPY} ../Launch/src/Launch/Graphics/Shaders/OpenGL_Basic.shader ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} ../Launch/src/Launch/Graphics/Shaders/OpenGL_Basic.shader ../Sandbox/src/Shaders/OpenGL_Basic.shader")
 		}
 
 	filter "configurations:Debug"

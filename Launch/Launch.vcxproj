@@ -94,7 +94,7 @@
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Debug-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)
-IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
+IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,7 +121,7 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Release-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)
-IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
+IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -148,7 +148,7 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Dist-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)
-IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)</Command>
+IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -11,9 +11,11 @@ void main()
 #fragment
 #version 330 core
 
-out vec4 fColor;
+layout(location = 0) out vec4 fColor;
+
+uniform vec4 uColor;
 
 void main()
 {
-	fColor = vec4(1.0f, 0.0f, 0.0f, 1.0f);
+	fColor = uColor;
 }
