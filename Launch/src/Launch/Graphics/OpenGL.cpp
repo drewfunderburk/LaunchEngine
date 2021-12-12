@@ -81,7 +81,7 @@ void Launch::OpenGL::draw()
 	unsigned int buffer;
 	glGenBuffers(1, &buffer);
 	glBindBuffer(GL_ARRAY_BUFFER, buffer);
-	glBufferData(GL_ARRAY_BUFFER, 6 * 2 * sizeof(float), positions, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, 4 * 2 * sizeof(float), positions, GL_STATIC_DRAW);
 
 	// Vertex attribute
 	glEnableVertexAttribArray(0);
@@ -100,7 +100,7 @@ void Launch::OpenGL::draw()
 
 	unsigned int location = glGetUniformLocation(shader, "uColor");
 	ASSERT(location != -1);
-	glUniform4f(location, 0.6f, 0.2f, 0.4f, 1.0f);
+	glUniform4f(location, 0.4f, 0.2f, 0.4f, 1.0f);
 
 	// Rendering
 	glClear(GL_COLOR_BUFFER_BIT);
