@@ -77,6 +77,11 @@ void Launch::OpenGL::draw()
 		2, 3, 0
 	};
 
+	// Vertex Array Object
+	unsigned int vao;
+	glGenVertexArrays(1, &vao);
+	glBindVertexArray(vao);
+
 	// Vertex buffer
 	unsigned int buffer;
 	glGenBuffers(1, &buffer);
@@ -105,7 +110,7 @@ void Launch::OpenGL::draw()
 	// Rendering
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	//glDrawArrays(GL_TRIANGLES, 0, 3);
+	glBindVertexArray(vao);
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
 
 
