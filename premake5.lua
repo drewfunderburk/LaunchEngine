@@ -29,7 +29,8 @@ project "Launch"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/vendor/glfw-3.3.4.bin.WIN64/include",
-		"%{prj.name}/vendor/glew-2.1.0/include"
+		"%{prj.name}/vendor/glew-2.1.0/include",
+		"Launch/src/Launch"
 	}
 
 	libdirs
@@ -60,7 +61,7 @@ project "Launch"
 		postbuildcommands
 		{
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox"),
-			("{COPY} ../Launch/src/Launch/Graphics/Shaders/OpenGL_Basic.shader ../Sandbox/src/Shaders/OpenGL_Basic.shader")
+			("{COPY} ../Launch/src/Launch/Graphics/OpenGL/Shaders/OpenGL_Basic.shader ../Sandbox/src/OpenGL/Shaders/OpenGL_Basic.shader")
 		}
 
 	filter "configurations:Debug"

@@ -1,6 +1,6 @@
-#include "../Log.h"
+#include "Log.h"
 #include "Graphics.h"
-#include "OpenGL.h"
+#include "OpenGL\OpenGL.h"
 
 Launch::IGraphicsAPI* Launch::Graphics::m_graphicsAPI = nullptr;
 

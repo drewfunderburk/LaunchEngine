@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>LN_PLATFORM_WINDOWS;LN_BUILD_DLL;GLEW_STATIC;LN_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;src\Launch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -94,7 +94,7 @@
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Debug-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Launch\Launch.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)
-IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
+IF EXIST ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader ..\Sandbox\src\OpenGL\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader ..\Sandbox\src\OpenGL\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -102,7 +102,7 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>LN_PLATFORM_WINDOWS;LN_BUILD_DLL;GLEW_STATIC;LN_Release;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;src\Launch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -121,7 +121,7 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Release-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Launch\Launch.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)
-IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
+IF EXIST ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader ..\Sandbox\src\OpenGL\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader ..\Sandbox\src\OpenGL\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -129,7 +129,7 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>LN_PLATFORM_WINDOWS;LN_BUILD_DLL;GLEW_STATIC;LN_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;vendor\glfw-3.3.4.bin.WIN64\include;vendor\glew-2.1.0\include;src\Launch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -148,7 +148,7 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Dist-windows-x86_64\Launch\Launch.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Launch\Launch.dll ..\bin\Dist-windows-x86_64\Sandbox &gt; nul)
-IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader ..\Sandbox\src\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
+IF EXIST ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E /Y /I ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader ..\Sandbox\src\OpenGL\Shaders\OpenGL_Basic.shader &gt; nul) ELSE (xcopy /Q /Y /I ..\Launch\src\Launch\Graphics\OpenGL\Shaders\OpenGL_Basic.shader ..\Sandbox\src\OpenGL\Shaders\OpenGL_Basic.shader &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -161,7 +161,8 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
     <ClInclude Include="src\Launch\EntryPoint.h" />
     <ClInclude Include="src\Launch\Graphics\Graphics.h" />
     <ClInclude Include="src\Launch\Graphics\IGraphicsAPI.h" />
-    <ClInclude Include="src\Launch\Graphics\OpenGL.h" />
+    <ClInclude Include="src\Launch\Graphics\OpenGL\OpenGL.h" />
+    <ClInclude Include="src\Launch\Graphics\OpenGL\OpenGLVertexBuffer.h" />
     <ClInclude Include="src\Launch\Log.h" />
     <ClInclude Include="src\Launch\Math\Matrix3.h" />
     <ClInclude Include="src\Launch\Math\Matrix4.h" />
@@ -177,7 +178,8 @@ IF EXIST ..\Launch\src\Launch\Graphics\Shaders\OpenGL_Basic.shader\ (xcopy /Q /E
     <ClCompile Include="src\Launch\Application.cpp" />
     <ClCompile Include="src\Launch\Components\Component.cpp" />
     <ClCompile Include="src\Launch\Graphics\Graphics.cpp" />
-    <ClCompile Include="src\Launch\Graphics\OpenGL.cpp" />
+    <ClCompile Include="src\Launch\Graphics\OpenGL\OpenGL.cpp" />
+    <ClCompile Include="src\Launch\Graphics\OpenGL\OpenGLVertexBuffer.cpp" />
     <ClCompile Include="src\Launch\Log.cpp" />
     <ClCompile Include="src\Launch\Math\Matrix3.cpp" />
     <ClCompile Include="src\Launch\Math\Matrix4.cpp" />

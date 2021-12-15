@@ -1,6 +1,6 @@
 #pragma once
-#include "../Core.h"
-#include "IGraphicsAPI.h"
+#include "Core.h"
+#include "Graphics/IGraphicsAPI.h"
 #include "GL/glew.h"
 #include "GLFW/glfw3.h"
 #include <string>
