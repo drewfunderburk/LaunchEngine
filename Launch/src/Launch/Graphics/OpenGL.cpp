@@ -1,5 +1,5 @@
 #include "OpenGL.h"
-#include "Log.h"
+#include "../Log.h"
 #include <fstream>
 #include <sstream>
 
@@ -98,7 +98,7 @@ void Launch::OpenGL::draw()
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
 
-	const char* filePath = "src/OpenGL/Shaders/OpenGL_Basic.shader";
+	const char* filePath = "src/Shaders/OpenGL_Basic.shader";
 	ShaderProgramSource source = parseShader(filePath);
 	unsigned int shader = createShader(source.VertexSource, source.FragmentSource);
 	glUseProgram(shader);

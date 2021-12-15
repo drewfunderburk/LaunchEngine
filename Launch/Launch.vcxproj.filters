@@ -10,9 +10,6 @@
     <Filter Include="Launch\Graphics">
       <UniqueIdentifier>{20EBC926-8C76-37EB-9587-BADF019293EB}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Launch\Graphics\OpenGL">
-      <UniqueIdentifier>{54D0AA63-40CA-D3B5-2937-6AC615D03922}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Launch\Math">
       <UniqueIdentifier>{B917F686-25CD-6E7C-AEC1-68531A766580}</UniqueIdentifier>
     </Filter>
@@ -43,11 +40,8 @@
     <ClInclude Include="src\Launch\Graphics\IGraphicsAPI.h">
       <Filter>Launch\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="src\Launch\Graphics\OpenGL\OpenGL.h">
-      <Filter>Launch\Graphics\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Launch\Graphics\OpenGL\OpenGLVertexBuffer.h">
-      <Filter>Launch\Graphics\OpenGL</Filter>
+    <ClInclude Include="src\Launch\Graphics\OpenGL.h">
+      <Filter>Launch\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="src\Launch\Log.h">
       <Filter>Launch</Filter>
@@ -90,11 +84,8 @@
     <ClCompile Include="src\Launch\Graphics\Graphics.cpp">
       <Filter>Launch\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="src\Launch\Graphics\OpenGL\OpenGL.cpp">
-      <Filter>Launch\Graphics\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Launch\Graphics\OpenGL\OpenGLVertexBuffer.cpp">
-      <Filter>Launch\Graphics\OpenGL</Filter>
+    <ClCompile Include="src\Launch\Graphics\OpenGL.cpp">
+      <Filter>Launch\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="src\Launch\Log.cpp">
       <Filter>Launch</Filter>
