@@ -5,3 +5,5 @@
 > This engine will be recoded from scratch soon, as most of it is code stubs and placeholders for more complete functionality later, and now that school is out I should finally have time to work on it.
 
 #### The Graphics branch of this engine is the most up to date branch as of 06/20/22 and is one of my first attempts into writing an OpenGL graphics engine.
+
+For a glance at what's been happening, head to [Launch/src/Launch/Graphics/OpenGl.cpp](./Launch/src/Launch/Graphics/OpenGl.cpp)
